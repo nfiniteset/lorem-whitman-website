@@ -4,4 +4,8 @@ source 'http://rubygems.org'
 
 gem "middleman", "~>3.0.14"
 gem 'whitman', :git => 'https://github.com/mrlarner/lorem-whitman.git'
+gem 'sinatra-contrib'
 
+group :development do
+  gem 'pry'
+end
