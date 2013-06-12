@@ -125,6 +125,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  compass
   middleman (~> 3.0.14)
   pry
   rack-cors (~> 0.2.8)

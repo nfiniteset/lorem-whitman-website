@@ -16,6 +16,17 @@
   </head>
 
   <body class="<%= page_classes %>">
-    <%= yield %>
+    <div class="container main">
+      <h1><a href="/">Lorem Whitman</a></h1>
+      <%= yield %>
+      <div class="push"></div>
+    </div>
+    <footer class="container">
+      <ul>
+        <li><a href="http://github.com/mrlarner/lorem-whitman">The Gem</a></li>
+        <li><a href="/docs">The API</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </footer>
   </body>
 </html>

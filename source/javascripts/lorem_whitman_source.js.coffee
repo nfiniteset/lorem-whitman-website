@@ -1,4 +1,4 @@
-class loremWhitman.Source
+class window.loremWhitman.Source
 
   fetchParagraphs: (count = 1) ->
     $.getJSON("/api/paragraphs/#{count}").then (data) ->

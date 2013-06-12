@@ -1,0 +1,10 @@
+html, body {
+  height: 100%;
+}
+.main {
+  min-height: 100%;
+  margin-bottom: -60px !important;
+}
+footer, .push {
+  height: 60px;
+}

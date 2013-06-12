@@ -2,12 +2,11 @@
 title: Lorem Whitman
 ---
 
-<div class="container">
-  <h1>Lorem Whitman</h1>
-  <ul class="chunks">
-  <% paragraphs.each do |p| %>
-  <li><p><%= p %></p></li>
-  <% end %>
-  </ul>
-  <button class="fetch">Not yet satisfied?</button>
+<ul class="samples">
+<% paragraphs.each do |p| %>
+<li><p><%= p %></p></li>
+<% end %>
+</ul>
+<div class="actions">
+  <a href="#" class="fetch">Not yet satisfied?</a>
 </div>
