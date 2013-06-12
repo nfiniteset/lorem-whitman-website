@@ -1,5 +1,5 @@
 template = _.template '''
-  <li style="display: none"><p><%= paragraph %></p></li>
+  <li class="hidden"><p><%= paragraph %></p></li>
 '''
 
 $ ->
@@ -16,4 +16,5 @@ $ ->
       els = $(markup.join(''))
 
       samples.append els
-      els.slideDown('fast')
+      setTimeout (-> els.removeClass('hidden')), 0
+      

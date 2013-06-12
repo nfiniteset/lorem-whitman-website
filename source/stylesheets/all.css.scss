@@ -70,6 +70,16 @@ h3 {
   p:first-letter {
     font-size: 1.5em;
   }
+
+  li {
+    @include transition(max-height 1.2s ease-out);
+    max-height: 300px;
+    overflow: hidden;
+
+    &.hidden {
+      max-height: 0;
+    }
+  }
 }
 
 h1, .actions, footer {
@@ -88,10 +98,6 @@ h1, .actions, footer {
   &:hover {
     color: #333;
     background-color: #ccc;
-  }
-
-  &:first-letter {
-    font-size: 24px;
   }
 }
 
