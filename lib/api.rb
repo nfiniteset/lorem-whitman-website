@@ -2,8 +2,13 @@ require 'sinatra'
 require 'sinatra/json'
 require 'whitman'
 
+
 class API < Sinatra::Base
   helpers Sinatra::JSON
+
+  configure do
+    enable :cross_origin
+  end
 
   get '/' do
     json whitman: paragraphs(1)
