@@ -1,3 +1,4 @@
+window.loremWhitman = {}
 class window.loremWhitman.Source
 
   fetchParagraphs: (count = 1) ->

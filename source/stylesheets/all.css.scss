@@ -1,19 +1,24 @@
 @charset "utf-8";
 @import "compass/css3/transition";
 @import "compass/css3/box-sizing";
+@import "compass/utilities/text/replacement";
 @import 'sticky_footer';
 
-$brown: rgba(25,0,0,.7);
-$fancyFont: "voluta-script-pro", serif;
+$fancyFont: "ltc-bodoni-175", serif;
 
+$lightColor: white;
+$darkColor: #999;
 
 body {
   padding: 0;
 
-  background: #d4d4d4 url("../images/background.png");
-  color: $brown;
+  background: #57544a url(image-path('big-beard-walt.jpg')) center top no-repeat;
+  background-size: 1000px 1119px;
+  color: $lightColor;
 
-  font-family: serif;
+  font-family: $fancyFont;
+  font-size: 18px;
+  line-height: 28px;
 }
 
 .container {
@@ -28,21 +33,23 @@ body {
 a {
   @include transition(color .5s ease-out);
   text-decoration: none;
-  color: $brown;
+  color: $lightColor;
 
   &:hover {
     @include transition(none);
-    color: lighten($brown, 15%);
+    color: lighten($darkColor, 15%);
   }
 }
 
 h1 {
-  margin: 0 0 60px 0;
-  padding-top: 200px;
+  margin: 0 0 372px 0;
+  padding-top: 145px;
 
   font-family: $fancyFont;
   font-weight: normal;
-  font-size: 160px;
+  font-size: 60px;
+  @include replace-text(image-path('lorem-whitman-logo.png'), center, bottom);
+  background-size: 600px 107px;
 
   a {
     text-decoration: none;
@@ -56,30 +63,36 @@ h3 {
 .samples {
   list-style: none;
 
-  font-size: 24px;
-  line-height: 48px;
-
   p {
     margin: 0 0 24px 0;
-
-    font-weight: bold;
-    font-family: serif;
   }
 
   p:first-letter {
-    font-size: 48px;
-    font-weight: normal;
-    letter-spacing: -3px;
+    font-size: 1.5em;
   }
 }
 
-h1, .samples, .actions, footer {
+h1, .actions, footer {
   text-align: center;
 }
 
 .fetch {
-  font-family: $fancyFont;
-  font-size: 80px;
+  padding: 3px 6px;
+  
+  background-color: $lightColor;
+  color: #333;
+
+  font-size: .8em;
+  text-transform: uppercase;
+
+  &:hover {
+    color: #333;
+    background-color: #ccc;
+  }
+
+  &:first-letter {
+    font-size: 24px;
+  }
 }
 
 footer {
