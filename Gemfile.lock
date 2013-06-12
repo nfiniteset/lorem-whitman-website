@@ -125,5 +125,5 @@ PLATFORMS
 DEPENDENCIES
   middleman (~> 3.0.14)
   pry
-  sinatra-contrib
+  sinatra-contrib (~> 1.3.2)
   whitman!
