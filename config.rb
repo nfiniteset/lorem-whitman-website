@@ -1,20 +1,13 @@
 require 'whitman'
 require 'lib/api'
 
-DEFAULT_PARAGRAPH_COUNT = 1
-SENTENCES_PER_PARAGRAPH = 2
-
-
 map "/api" do  
   run API
 end  
 
-
 helpers do
-  def paragraphs(count = DEFAULT_PARAGRAPH_COUNT)
-    count.times.map {
-      Whitman::Paragraph.paragraphs(SENTENCES_PER_PARAGRAPH).join(' ')
-    }
+  def paragraphs(count = 1)
+    Whitman::Paragraph.paragraphs(count)
   end
 end
 
