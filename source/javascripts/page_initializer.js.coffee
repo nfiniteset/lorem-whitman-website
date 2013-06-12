@@ -5,12 +5,15 @@ template = _.template '''
 $ ->
   source = new loremWhitman.Source
   fetchButton = $('.fetch')
-  chunksContainer = $('.chunks')
+  samples = $('.samples')
 
-  fetchButton.on 'click', ->
+  fetchButton.on 'click', (event) ->
+    event.preventDefault()
+
     source.fetchParagraphs().then (paragraphs) ->
       markup = _(paragraphs).map (p) ->
         template paragraph: p
       els = $(markup.join(''))
-      chunksContainer.append els
+
+      samples.append els
       els.slideDown('fast')
