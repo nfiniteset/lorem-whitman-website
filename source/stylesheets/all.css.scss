@@ -9,11 +9,14 @@ $fancyFont: "ltc-bodoni-175", serif;
 $lightColor: white;
 $darkColor: #999;
 
+html {
+  background: url(image-path('walt-felt.jpg'));
+}
+
 body {
   padding: 0;
 
-  background: #57544a url(image-path('big-beard-walt.jpg')) center top no-repeat;
-  background-size: 1000px 1119px;
+  background: #787065 url(image-path('walt-felt.jpg'));
   color: $lightColor;
 
   font-family: $fancyFont;
@@ -21,9 +24,16 @@ body {
   line-height: 28px;
 }
 
+.wrapper {
+  background: url(image-path('big-beard-walt.jpg')) center top no-repeat;
+  background-size: 100% auto;
+  min-height: 100%;
+}
+
 .container {
+  // position: relative;
   margin: 0 auto;
-  width: 640px;
+  max-width: 640px;
 }
 
 .push {
@@ -42,14 +52,20 @@ a {
 }
 
 h1 {
-  margin: 0 0 372px 0;
-  padding-top: 145px;
+  position: absolute;
+  top: 2vw;
+  height: 20vw;
+  width: 64vw;
+  margin-left: 50vw;
+  left: -32vw;
+  // margin: 0 auto;
+  // padding-top: 145px;
 
   font-family: $fancyFont;
   font-weight: normal;
   font-size: 60px;
-  @include replace-text(image-path('lorem-whitman-logo.png'), center, bottom);
-  background-size: 600px 107px;
+  @include replace-text(image-path('lorem-whitman-logo.png'), center, top);
+  background-size: 100% auto;
 
   a {
     text-decoration: none;
@@ -60,7 +76,15 @@ h3 {
   margin-top: 48px;
 }
 
+.mustache-aligner {
+  height: 51vw;
+  content: '.';
+  color: transparent;
+}
+
 .samples {
+  max-width: 640px;
+  padding: 0 24px;
   list-style: none;
 
   p {
