@@ -9,10 +9,6 @@ $fancyFont: "ltc-bodoni-175", serif;
 $lightColor: white;
 $darkColor: #999;
 
-html {
-  background: url(image-path('walt-felt.jpg'));
-}
-
 body {
   padding: 0;
 
@@ -31,13 +27,12 @@ body {
 }
 
 .container {
-  // position: relative;
   margin: 0 auto;
   max-width: 640px;
 }
 
 .push {
-  margin-top: 100px;
+  margin-top: 40px;
 }
 
 a {
@@ -58,14 +53,18 @@ h1 {
   width: 64vw;
   margin-left: 50vw;
   left: -32vw;
-  // margin: 0 auto;
-  // padding-top: 145px;
+
+  cursor: pointer;
+  @include replace-text(image-path('lorem-whitman-logo.png'), center, top);
+  background-size: 100% auto;
 
   font-family: $fancyFont;
   font-weight: normal;
   font-size: 60px;
-  @include replace-text(image-path('lorem-whitman-logo.png'), center, top);
-  background-size: 100% auto;
+
+  &:hover {
+    opacity: .7;
+  }
 
   a {
     text-decoration: none;
@@ -76,7 +75,7 @@ h3 {
   margin-top: 48px;
 }
 
-.mustache-aligner {
+.mustache-buffer {
   height: 51vw;
   content: '.';
   color: transparent;
@@ -151,3 +150,4 @@ footer {
     }
   }
 }
+
