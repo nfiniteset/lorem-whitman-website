@@ -20,11 +20,13 @@ $ ->
   samples = $('.samples')
 
   fetchButton.on 'click', (event) ->
-    event.preventDefault()
-
     source.fetchParagraphs().then (paragraphs) ->
       appendSample(paragraphs)
       replacePrompt()
+    event.preventDefault()
+
+  $('h1').click ->
+    window.location = '/'
 
 
 
